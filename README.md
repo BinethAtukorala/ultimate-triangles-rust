@@ -10,6 +10,8 @@ The journey of me learning rust by implementing everything I can think of with t
 3. Calculate the perimeter of a triangle.
 4. Calculate the area of a triangle (Normal way and with Heron's Formula).
 5. Check whether a point is inside a triangle.
+6. Check whether a triangle is inside another triangle.
+7. Check whether a triangle can contain another triangle.
 
 ## How to run
 
