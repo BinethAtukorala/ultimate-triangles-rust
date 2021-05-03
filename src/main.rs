@@ -45,8 +45,13 @@ impl Triangle {
         self.a.distance(&self.b) + self.b.distance(&self.c) + self.c.distance(&self.a)
     }
 
-    // Find area of a triangle
-    fn area(&self, perimeter: f32) -> f32{
+    // Find area of a triangle 
+    fn area(&self, perimeter: f32) -> f32 {
+        ((self.a.x*(self.b.y-self.c.y) + self.b.x*(self.c.y - self.a.y) + self.c.x*(self.a.y - self.b.y)) as f32 /2.0).abs()
+    }
+
+    // Find area of a triangle with Heron's Formula
+    fn areaHeron(&self, perimeter:f32) -> f32 {
         let p = perimeter/(2 as f32);
         f32::sqrt(p * (p-self.a.distance(&self.b)) * (p-self.b.distance(&self.c)) * (p-self.c.distance(&self.a)))
     }
