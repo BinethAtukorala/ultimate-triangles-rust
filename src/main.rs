@@ -67,14 +67,22 @@ impl Triangle {
         self.area() == tr_a.area() + tr_b.area() + tr_c.area()
     }
 
+    fn can_contain_triangle(&self, tr: &Triangle) -> bool {
+        self.area() >= tr.area()
+    }
+
+    fn is_triangle_inside(&self, tr: &Triangle) -> bool{
+        self.is_point_inside(&tr.a) && self.is_point_inside(&tr.b) && self.is_point_inside(&tr.c)
+    }
+
 }
 
 fn main() {
     println!("\n==== Ultimate Triangle Functions");
 
     let tr = Triangle{
-        a: Point{x:5, y: 5},
-        b: Point{x:10, y: 0},
+        a: Point{x: 5, y: 5},
+        b: Point{x: 10, y: 0},
         c: Point{x: 0, y: 0},
     };
 
@@ -87,4 +95,13 @@ fn main() {
     let random_point = Point{x: 4, y: 3};
     
     println!("Is the point {} in the triangle? : {}", random_point, tr.is_point_inside(&random_point));
+
+    let random_triangle = Triangle{
+        a: Point{x: 2, y: 3},
+        b: Point{x: 3, y: 1},
+        c: Point{x: 5, y: 0},
+    };
+
+    println!("Can the traingle {} be contained in the triangle? : {}", random_triangle, tr.can_contain_triangle(&random_triangle));
+    println!("Is the triangle {} in the triangle? : {}", random_triangle, tr.is_triangle_inside(&random_triangle));
 }
