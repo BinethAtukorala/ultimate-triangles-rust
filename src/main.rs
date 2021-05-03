@@ -72,8 +72,6 @@ impl Triangle {
 fn main() {
     println!("\n==== Ultimate Triangle Functions");
 
-    println!("{}", Point{x: 2, y: 3});
-
     let tr = Triangle{
         a: Point{x:5, y: 5},
         b: Point{x:10, y: 0},
