@@ -3,6 +3,14 @@ _Now with RUST_
 
 The journey of me learning rust by implementing everything I can think of with triangles.
 
+## What can this mighty program do?
+
+1. Create triangles with points.
+2. Find the distance between two points to get length of a side.
+3. Calculate the perimeter of a triangle.
+4. Calculate the area of a triangle (Normal way and with Heron's Formula).
+5. Check whether a point is inside a triangle.
+
 ## How to run
 
 Clone the repo to your machine. Make sure [Rust](rust-lang.org) is installed.
